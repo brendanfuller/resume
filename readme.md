@@ -1,8 +1,6 @@
 # Resume
 
-This project contains my resume that is dynamically generated using [React PDF](https://react-pdf.org/) with the use if [ViteJS](https://vitejs.dev).
-
-
+This project contains my resume that is dynamically generated using [React PDF](https://react-pdf.org/) with the use of [ViteJS](https://vitejs.dev).
 
 # Viewing the Project
 
