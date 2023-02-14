@@ -9,8 +9,7 @@ import {
   Link,
 } from "@react-pdf/renderer";
 
-import resume from "../config/resume";
-
+import resume from "../config/resume.js";
 
 /**
  * Resume Template inspired by https://alecgorge.com/Alec%20Gorge%20Resume.pdf
@@ -21,11 +20,10 @@ interface ListItemProps {
   hasBullet: boolean;
 }
 
-
 /**
  * ListItem - An item in a list
- * @param param0 
- * @returns 
+ * @param param0
+ * @returns
  */
 const ListItem = ({ text, hasBullet = true }: ListItemProps) => {
   return (
@@ -55,17 +53,17 @@ interface CardProps {
   company: string;
   occupation?: string;
   time: string;
-  colorless: boolean,
+  colorless: boolean;
 }
 
 /**
  * Card - A card for each experience, project, or current job
  * @param description - Description of the job (Array of string)
  * @param subject - Basically a header of info, can be like programming languages
- * @param company - Company, project, or location. 
+ * @param company - Company, project, or location.
  * @param time - When was this event occur?
- * @param colorless - Boolean to remove color from the header company title 
- * @returns 
+ * @param colorless - Boolean to remove color from the header company title
+ * @returns
  */
 const Card = ({
   description,
@@ -73,22 +71,39 @@ const Card = ({
   company,
   occupation,
   time,
-  colorless
+  colorless,
 }: CardProps) => {
   return (
     <View style={cards.content}>
       <View style={cards.header}>
-        {colorless ? <><Text style={[cards.title, {color: "gray"}]} wrap>{company}</Text></> : <><Text wrap style={[cards.title, styles.primary]}>{company}</Text></>}
+        {colorless ? (
+          <>
+            <Text style={[cards.title, { color: "gray" }]} wrap>
+              {company}
+            </Text>
+          </>
+        ) : (
+          <>
+            <Text wrap style={[cards.title, styles.primary]}>
+              {company}
+            </Text>
+          </>
+        )}
         <Text style={[cards.profession]}>
-           {occupation && <>
-            <Text style={[{ fontWeight: "bold", color: "black" }]}>
-            {occupation}
-          </Text>
-          {", "}</>}
+          {occupation && (
+            <>
+              <Text style={[{ fontWeight: "bold", color: "black" }]}>
+                {occupation}
+              </Text>
+              {", "}
+            </>
+          )}
           <Text>{time}</Text>
         </Text>
       </View>
-      <Text style={[cards.text, {marginBottom: 2}, styles.primary]}>{subject}</Text>
+      <Text style={[cards.text, { marginBottom: 2 }, styles.primary]}>
+        {subject}
+      </Text>
       {/* Loop all of the list items from the descriptions */}
       <View style={cards.body}>
         {description.length == 1 ? (
@@ -183,9 +198,9 @@ const Simplex = () => (
         </View>
       </View>
       <View style={styles.content}>
-        <View style={[styles.stack, {marginTop: 20}]}>
+        <View style={[styles.stack, { marginTop: 20 }]}>
           {/* Show the main card for the information */}
-          <Card {...resume.main} colorless={false}/>
+          <Card {...resume.main} colorless={false} />
         </View>
         {/* Now loop all of the columns for each experiences/projects */}
         <View style={styles.columns} wrap>
@@ -208,7 +223,7 @@ const Simplex = () => (
               EDUCATION
             </Text>
             {resume.education.map((item, index) => {
-              return <Card key={index} {...item} colorless={true}/>;
+              return <Card key={index} {...item} colorless={true} />;
             })}
           </View>
         </View>
