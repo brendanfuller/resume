@@ -2,7 +2,7 @@ name: Build Resume
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build-project:
     name: Build Project
