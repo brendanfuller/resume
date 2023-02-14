@@ -6,7 +6,7 @@ on:
 jobs:
   build-project:
     name: Build Project
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
