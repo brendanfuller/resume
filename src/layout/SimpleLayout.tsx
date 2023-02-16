@@ -163,11 +163,10 @@ const cards = StyleSheet.create({
 });
 
 interface SimpleLayoutProps {
-  commitHash?: string
+  commitHash?: string;
 }
 
-
-const SimpleLayout = ({commitHash}: SimpleLayoutProps) => (
+const SimpleLayout = ({ commitHash }: SimpleLayoutProps) => (
   <Document>
     <Page style={styles.body}>
       <View style={styles.header}>
@@ -205,10 +204,13 @@ const SimpleLayout = ({commitHash}: SimpleLayoutProps) => (
       <View style={styles.content}>
         <View style={[styles.stack, { marginTop: 20 }]}>
           {/* Show the main card for the information */}
+          <Text style={[styles.roboto, { fontSize: 10, color: "gray" }]}>
+            CURRENT
+          </Text>
           <Card {...resume.main} colorless={false} />
         </View>
         {/* Now loop all of the columns for each experiences/projects */}
-        <View style={[styles.columns]} >
+        <View style={[styles.columns]}>
           <View style={[styles.stack, { marginRight: 32 }]} wrap>
             <Text style={[styles.roboto, { fontSize: 10, color: "gray" }]}>
               EXPERIENCES
@@ -231,12 +233,22 @@ const SimpleLayout = ({commitHash}: SimpleLayoutProps) => (
               return <Card key={index} {...item} colorless={true} />;
             })}
           </View>
-        
         </View>
-      
       </View>
       <View style={styles.pageNumber}>
-            <Link src="https://github.com/brendanfuller/resume" style={{color: "gray"}}><Text>Version: <Text style={{fontWeight: "bold"}}>{commitHash ? commitHash : import.meta.env.VITE_COMMIT_HASH.trim()}</Text></Text></Link>
+        <Link
+          src="https://github.com/brendanfuller/resume"
+          style={{ color: "gray" }}
+        >
+          <Text>
+            Version:{" "}
+            <Text style={{ fontWeight: "bold" }}>
+              {commitHash
+                ? commitHash
+                : import.meta.env.VITE_COMMIT_HASH.trim()}
+            </Text>
+          </Text>
+        </Link>
       </View>
     </Page>
   </Document>
@@ -297,7 +309,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
   },
   pageNumber: {
-    position: 'absolute',
+    position: "absolute",
     fontSize: 10,
     bottom: 30,
     left: 32,
@@ -305,7 +317,7 @@ const styles = StyleSheet.create({
     width: "100%",
     textAlign: "justify",
     fontFamily: "Roboto",
-    color: 'grey',
+    color: "grey",
   },
 });
 
