@@ -1,15 +1,15 @@
 import React from "react";
 import { renderToFile } from "@react-pdf/renderer";
-import Simplex from "../layout/Simplex.js";
+import SimpleLayout from "../layout/SimpleLayout.js";
 
-import path from "path";
-import process from "process";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
+import * as child from "child_process";
+import process from 'process';
+
+const commitHash = child.execSync("git rev-parse --short HEAD").toString();
 
 const main = async () => {
-  await renderToFile(<Simplex />, `${process.cwd()}/.out/resume.pdf`);
+  await renderToFile(<SimpleLayout commitHash={commitHash}/>, `${process.cwd()}/.out/resume.pdf`);
 };
 
 main();

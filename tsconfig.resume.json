@@ -10,7 +10,8 @@
     "resolveJsonModule": true,
 
     "jsx": "react-jsx",
-    "outDir": ".out"
+    "outDir": ".out",
+    "types": ["node", "vite/client"]
   },
 
   "include": ["./src/build/build.tsx"]
