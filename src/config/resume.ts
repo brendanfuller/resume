@@ -53,7 +53,7 @@ const resume = {
         "Worked with a group 30+ students and mentors.",
         "Learned and maintained code base of Java for the robot.",
         "Prototyped alternative dashboards in web with react.",
-        "Development lead select development sections.",
+        "Development lead for autonomous and tele-op periods.",
       ],
       company: "FIRST Robotics",
       occupation: "Team Member",
@@ -64,7 +64,7 @@ const resume = {
     {
       description: [
         "Xemplate was designed as a simple templating system for blogs and other static HTML uses.",
-        "Used to gain knowledge in TypeScript and understand the logic of Abstract Syntax Trees with HTML.",
+        "Used to gain knowledge in TypeScript and understand the logic of Abstract Syntax Tree (AST) with HTML.",
         "Included a development server with hot reloading, importing, and modularization.",
       ],
       company: "Xemplate",
@@ -72,33 +72,34 @@ const resume = {
       time: "Jan 2020-June 2020",
     },
     {
-        description: [
-          "A commenting program to comment programs.",
-          "Was designed to comment code for my Visual Basic course as commenting took 1/3 of total project tile.",
-          "With commenting being critical important, plus the need to learn VB.net, this program was made in VB.net."
-        ],
-        company: "CommentMaster",
-        occupation: "Commenter",
-        time: "Sept 2022-Dec 2023",
-      },
-    // {
-    //     description: [
-    //       "Simple to use table based macro based solution",
-    //       "Used to gain knowledge in TypeScript and understand the logic of Abstract Syntax Trees with HTML.",
-    //       "Included a development server with hot reloading, importing, and modularization. ",
-    //     ],
-    //     company: "FireDeck",
-    //     occupation: "Templating System",
-    //     time: "Feb 2022-present",
-    //   },
+      description: [
+        "A program to auto-generate comments for form based VB.net programs.",
+        "Was designed to comment code for my Visual Basic course work",
+        "Re-introduced me to Visual Basic, and supported saving, and updating",
+      ],
+      company: "CommentMaster",
+      occupation: "Commenter",
+      time: "Sept 2022-Dec 2023",
+    },
+    {
+      description: [
+        "Built a modernized compute node for running Proxmox.",
+        "Used to gain knowledge in virtualization, docker, security, and reverse proxies.",
+        "Hosted various open source projects for personal use.",
+      ],
+      company: "Homelab",
+      subject: "Proxmox, Docker, Ubuntu, Tailscale ",
+      occupation: "Self-hosted",
+      time: "May 2022-present",
+    },
   ],
   education: [
     {
       description: [
-        "Bachelors in Computer Science Information Systems",
-        "Minor in General Business",
-        "Participated in club for Association for Computing Machinery",
-        "Administrated CSIS Discord server for CSIS related discussions",
+        "Bachelors in Computer Science Information Systems.",
+        "Minor in General Business.",
+        "Participated in club for Association for Computing Machinery.",
+        "Administrated CSIS Discord server for CSIS related discussions and topics.",
       ],
       company: "SVSU",
       occupation: "Saginaw Valley State University",
