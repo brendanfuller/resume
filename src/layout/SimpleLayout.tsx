@@ -193,8 +193,7 @@ const SimpleLayout = ({ commitHash }: SimpleLayoutProps) => (
             </Link>
           </Text>
           <Text style={styles.text}>
-            <Text>{resume.contact.location}</Text>
-            {" - "}
+          
             <Link src={`https://${resume.contact.website}`}>
               {resume.contact.website}
             </Link>
@@ -287,7 +286,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "gray",
-    fontSize: 8,
+    fontSize: 9,
     textAlign: "justify",
     fontFamily: "Roboto",
   },
